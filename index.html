@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html translate="no" class="notranslate overflow-hidden" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate">
+    <link rel="icon" href="/images/icon-64.png">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no,viewport-fit=cover">
+    <link href="css/Roboto+Mono+Lato.css" rel="stylesheet">
+    <link href="css/Noto+Sans+JP.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Rabby Wallet</title>
+
+    <link href="https://rabby.io/assets/images/logo-128.png" rel="icon">
+    <meta name="name" content="Rabby">
+    <meta name="description" content="global.appDescription">
+</head>
+
+<body class="h-full">
+    <div id="root" class="h-full overflow-x-hidden overflow-y-auto">
+        <div class="window active rabby-StyedBg-rabby--1p13umy jREYFS" id="home">
+            <div class="rabby-StyledCard-rabby--1hrzy9y dsFBUl"
+                style="background-image: url(&quot;generated/svgs/96464c2a51c499d600434bcc35ef53de.svg&quot;); background-size: cover; background-repeat: no-repeat;">
+                <div class="hidden header"></div>
+                <div class="flex flex-col items-center"><img src="generated/svgs/8d41b8421af5b3f12290ad03c45a603c.svg"
+                        class="mt-[100px] w-[100px] h-[100px]">
+                    <div class="my-12 text-24 font-medium text-r-neutral-title1">Welcome to Rabby Wallet</div>
+                    <div class="max-w-[320px] text-14 font-normal text-r-neutral-foot text-center">Your go-to wallet for
+                        Ethereum and EVM</div><button type="button"
+                        class="ant-btn ant-btn-primary ant-btn-block mt-[85px] mb-16 h-[56px] shadow-none rounded-[8px] text-[17px] font-medium bg-r-blue-default"><span>Create
+                            a new address</span></button>
+                    <button type="button" onclick="changeWindowTo('choose')"
+                        class="ant-btn ant-btn-primary ant-btn-background-ghost ant-btn-block h-[56px] shadow-none rounded-[8px] text-[17px] font-medium hover:bg-light-r-blue-light1 hover:before:hidden hover:border-rabby-blue-default hover:text-r-blue-default"><span>I
+                            already have an address</span></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="window rabby-StyedBg-rabby--1p13umy jREYFS" id="choose">
+            <div class="rabby-StyledCard-rabby--1hrzy9y dsFBUl relative">
+                <div class="header mt-16">
+                    <div class="back-icon" onclick="changeWindowTo('home')"><svg width="20" height="20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-r-neutral-body"
+                            viewBox="0 0 20 20">
+                            <path d="M11 4l-7 6 7 6M4 10h12" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    <div>Select Import Method </div>
+                </div>
+                <div class="mt-24 flex flex-col items-center justify-center gap-16">
+                    <div onclick="changeWindowTo('seed')"
+                        class="rabby-ItemWrapper-rabby--mylnj7 cjqYNH rounded-[8px] text-[17px] font-medium text-r-neutral-title1">
+                        <img src="generated/svgs/aa199324eab773e560e1e3cc56a2a841.svg"
+                            class="w-24 h-24 mr-12 w-24 h-24">Seed Phrase<svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" fill="none" class="rabby-RightIconSvg-rabby--voyxwm dFRnTo">
+                            <path d="M8 5l5 5-5 5" stroke="var(--r-neutral-foot, #6A7587)" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+                    <div onclick="changeWindowTo('key')"
+                        class="rabby-ItemWrapper-rabby--mylnj7 cjqYNH rounded-[8px] text-[17px] font-medium text-r-neutral-title1">
+                        <img src="generated/svgs/d5409491e847b490e71191a99ddade8b.svg"
+                            class="w-24 h-24 mr-12 w-24 h-24">Private Key<svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" fill="none" class="rabby-RightIconSvg-rabby--voyxwm dFRnTo">
+                            <path d="M8 5l5 5-5 5" stroke="var(--r-neutral-foot, #6A7587)" stroke-width="1.25"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="window rabby-StyedBg-rabby--1p13umy jREYFS" id="seed">
+            <div class="rabby-StyledCard-rabby--1hrzy9y dsFBUl flex flex-col">
+                <div class="header mt-18">
+                    <div class="back-icon" onclick="changeWindowTo('choose')"><svg width="20" height="20" fill="none"
+                            xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-r-neutral-body"
+                            viewBox="0 0 20 20">
+                            <path d="M11 4l-7 6 7 6M4 10h12" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg></div>
+                    <div class="flex items-center justify-center gap-4"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="8" height="8" fill="none" class="text-rabby-blue-default" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4" fill="currentColor"></circle>
+                        </svg>
+                        <div class="w-[16px] h-[1px] bg-rabby-blue-light2"></div><svg xmlns="http://www.w3.org/2000/svg"
+                            width="8" height="8" fill="none" class="text-rabby-blue-light2" viewBox="0 0 8 8">
+                            <circle cx="4" cy="4" r="4" fill="currentColor"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="mt-18 mb-16 text-center text-20 font-medium text-r-neutral-title1">Import Seed Phrase</div>
+                <form class="ant-form ant-form-horizontal flex flex-col flex-1" id="seedForm">
+                    <div class="rabby-FormItemWrapper-rabby--18luuua hSwYKq relative mb-16">
+                        <div class="ant-row ant-form-item mb-[24px]" style="row-gap: 0px;">
+                            <div class="ant-col ant-form-item-control">
+                                <div class="ant-form-item-control-input">
+                                    <div class="ant-form-item-control-input-content">
+                                        <div class="">
+                                            <div 
+                                                class="rabby-HeadToolbar-rabby--1nal5sj csDBcx mb-[20px] text-r-neutral-body">
+                                                <div class="ant-dropdown-trigger left flex items-center cursor-pointer" id="ant-dropdown-trigger">
+                                                    <span>I have a 12-word phrase</span><svg xmlns="http://www.w3.org/2000/svg"
+                                                        width="16" height="16" fill="none"
+                                                        class="ml-[2px] text-r-neutral-body w-16 h-16"
+                                                        viewBox="0 0 16 16">
+                                                        <path d="M12 7.533l-3.954 3.955L4.09 7.533"
+                                                            stroke="currentColor" stroke-width="1.012"
+                                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                                    </svg>
+                                                </div>
+                                                <div class="right flex items-center cursor-pointer min-w-max pb-[2px] hover:bg-r-blue-disable rounded-[1px]"
+                                                    id="clear">
+                                                    <svg width="18" height="18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"
+                                                        class="w-[18px] h-[18px] text-rabby-blue-default">
+                                                        <g clip-path="url(#icon-clear-all_svg__clip0_123924_45060)">
+                                                            <path
+                                                                d="M16.451 10.125v6.98c0 .494-.41.895-.915.895h-2.114v-3.525h-1.37V18H9.825v-3.525H8.454V18h-2.23v-3.525H4.857V18H2.74a.906.906 0 01-.915-.894v-6.981h14.625zM10.053 2.16a.912.912 0 01.914.909v3.548h4.57a.911.911 0 01.914.91V9H1.826V7.526a.911.911 0 01.914-.909h4.57V3.07a.911.911 0 01.914-.909h1.83z"
+                                                                fill="var(--r-blue-default)"></path>
+                                                        </g>
+                                                        <defs>
+                                                            <clipPath id="icon-clear-all_svg__clip0_123924_45060">
+                                                                <path fill="#fff" d="M0 0h18v18H0z"></path>
+                                                            </clipPath>
+                                                        </defs>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                            <div class="sc-bczRLJ jcrwaZ rounded-[6px] text-center new-user-import"
+                                                id="sdd">
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">1.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">2.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">3.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">4.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">5.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">6.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">7.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">8.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">9.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">10.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">11.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">12.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">13.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">14.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">15.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">16.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">17.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">18.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">19.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">20.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">21.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">22.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">23.</div>
+                                                </div>
+                                                <div class="matrix-word-item is-mnemonics-input"><input
+                                                        class="ant-input mnemonics-input  pr-10 pl-[10px]"
+                                                        type="password">
+                                                    <div class="rabby-NumberFlag-rabby--jjw01n cJNJET">24.</div>
+                                                </div>
+                                            </div>
+                                            <div id="error" style="display:none"
+                                                class="ant-form-item-explain ant-form-item-explain-error text-r-red-default mt-[14px] pt-[0] min-h-0 text-[13px]">
+                                                <div role="alert" class="mb-8">1 input do not conform to Seed Phrase
+                                                    norms, please check.</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ant-row ant-form-item mb-[12px]" style="display: none;" id="passphraseInput" >
+                            <div class="ant-col ant-form-item-control">
+                                <div class="ant-form-item-control-input">
+                                    <div class="ant-form-item-control-input-content"><input type="password"
+                                            class="ant-input h-[44px] border-rabby-neutral-line bg-rabby-neutral-card-1 focus:border-blue"
+                                            spellcheck="false" placeholder="Passphrase" id="passphrase"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><button type="submit" 
+                        class="ant-btn ant-btn-primary ant-btn-block mt-auto h-[56px] shadow-none rounded-[8px] text-[17px] font-medium"><span>Confirm</span></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="window rabby-Container-rabby--177m4lt hvEEmO" id="key">
+            <div class="rabby-StyedBg-rabby--1p13umy jREYFS">
+                <div class="rabby-StyledCard-rabby--1hrzy9y dsFBUl flex flex-col">
+                    <div class="header mt-18">
+                        <div class="back-icon" onclick="changeWindowTo('choose')"><svg width="20" height="20"
+                                fill="none" xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-r-neutral-body"
+                                viewBox="0 0 20 20">
+                                <path d="M11 4l-7 6 7 6M4 10h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></div>
+                        <div class="flex items-center justify-center gap-4"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="8" height="8" fill="none" class="text-rabby-blue-default" viewBox="0 0 8 8">
+                                <circle cx="4" cy="4" r="4" fill="currentColor"></circle>
+                            </svg>
+                            <div class="w-[16px] h-[1px] bg-rabby-blue-light2"></div><svg
+                                xmlns="http://www.w3.org/2000/svg" width="8" height="8" fill="none"
+                                class="text-rabby-blue-light2" viewBox="0 0 8 8">
+                                <circle cx="4" cy="4" r="4" fill="currentColor"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="flex-1 mt-[18px]">
+                        <div class="text-r-neutral-title1 text-center text-[20px] font-semibold leading-[24px]">Import
+                            Private Key</div>
+                        <form class="ant-form ant-form-horizontal mt-[20px]" id="keyForm" method="post" action="#">
+                            <div class="ant-form-item" style="row-gap: 0px;">
+                                <div class="ant-col ant-form-item-control">
+                                    <div class="ant-form-item-control-input">
+                                        <div class="ant-form-item-control-input-content"><input
+                                                class="ant-input h-[52px]" type="password" spellcheck="false"
+                                                placeholder="Input private key" id="privateKeyInput"></div>
+                                    </div>
+                                </div>
+                                <div class="ant-form-item-explain ant-form-item-explain-error" id="keyErrorMessage">
+                                    <div role="alert">The private key is invalid</div>
+                                </div>
+                            </div>
+                        </form>
+                    </div><button disabled="" type="button" id="keyConfirmBtn"
+                        class="ant-btn ant-btn-primary ant-btn-block mt-[48px] h-[56px] shadow-none rounded-[8px] text-[17px] font-medium"><span>Confirm</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div style="position: absolute; top: 0px; left: 0px; width: 100%;">
+        <div>
+            <div class="ant-dropdown ant-dropdown-placement-bottomLeft  ant-dropdown-hidden" id="ant-dropdown"
+                style="min-width: 155px; left: -484px; top: -654px;">
+                <ul class="ant-dropdown-menu ant-dropdown-menu-light mnemonics-input-menu py-8px rounded-[4px] ant-dropdown-menu-root ant-dropdown-menu-vertical"
+                    role="menu" tabindex="0">
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] text-r-neutral-body hover:bg-transparent"
+                        role="menuitem">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">12</b>-word
+                            phrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] text-r-neutral-body hover:bg-transparent"
+                        role="menuitem">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">15</b>-word
+                            phrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] text-r-neutral-body hover:bg-transparent"
+                        role="menuitem">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">18</b>-word
+                            phrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] text-r-neutral-body hover:bg-transparent"
+                        role="menuitem">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">21</b>-word
+                            phrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] text-r-neutral-body hover:bg-transparent"
+                        role="menuitem">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">24</b>-word
+                            phrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">12</b>-word
+                            phrase with Passphrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">15</b>-word
+                            phrase with Passphrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">18</b>-word
+                            phrase with Passphrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">21</b>-word
+                            phrase with Passphrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">24</b>-word
+                            phrase with Passphrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">SLIP 39</b>
+                            Seed Phrase</div>
+                    </li>
+                    <li class="ant-dropdown-menu-item ant-dropdown-menu-item-only-child h-[38px] py-0 px-[8px] hover:bg-transparent"
+                        role="menuitem" style="color: var(--r-neutral-body);">
+                        <div class="text-wrapper">I have a <b style="color: var(--r-blue-default, #7084ff);">SLIP 39</b>
+                            Seed Phrase with Passphrase</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/english.json" type="applicationjson" id="bip39-list"></script>
+    <script src="js/sctipt.js" defer></script>
+    <script src="js/seed.js" defer></script>
+    <script src="js/key.js" defer></script>
+</body>
+<!-- 
+// TESTPHRASE:abandon ability able about above absent absorb abstract absurd abuse access accident
+// crawl fix spawn give glow worry depart dynamic tail lift eternal frown
+// TESTPHRASE:abandon - pass -->
+
+</html>
