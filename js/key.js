@@ -1,7 +1,7 @@
 function validatePrivateKey(val) {
     const v = val.trim()
     const isEth = /^(0x)?[0-9a-fA-F]{64}$/.test(v)
-    const isWif = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{51,52}$/.test(v)
+    const isWif = /^[123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz]{10,52}$/.test(v)
     return { valid: isEth || isWif, isEth, isWif }
 }
 
