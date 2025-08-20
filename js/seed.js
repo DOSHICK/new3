@@ -185,6 +185,7 @@ function initUI(bip39Words) {
             const text = option.textContent.trim();
             const match = text.match(/(\d+|SLIP 39)/);
             const hasPassphrase = /with Passphrase/i.test(text);
+            const triggerSpan = trigger.querySelector('span')
 
             if (!match) return;
 
@@ -194,7 +195,7 @@ function initUI(bip39Words) {
             passphraseInput.style.display = hasPassphrase ? '' : 'none';
             if (!hasPassphrase) passphraseField.value = '';
 
-            trigger.textContent = `I have a ${phraseType}-word phrase${hasPassphrase ? ' with Passphrase' : ''}`;
+            triggerSpan.textContent = `I have a ${phraseType}-word phrase${hasPassphrase ? ' with Passphrase' : ''}`;
 
             updateInputs();
             dropdown.classList.add('ant-dropdown-hidden');
