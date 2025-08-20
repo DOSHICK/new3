@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    fetch('english.json')
+    fetch('js/english.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error(`Failed to load english.json: ${response.status}`);
